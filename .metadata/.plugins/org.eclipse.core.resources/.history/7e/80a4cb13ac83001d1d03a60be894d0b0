@@ -1,0 +1,24 @@
+package com.actitime.test;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import com.actitime.generics.AutoConstant;
+import com.actitime.generics.BaseTest;
+import com.actitime.pom.ActitimeHomePage;
+import com.actitime.pom.ActitimeLoginPage;
+
+public class ActitimeLoginLogoutPage extends BaseTest 
+
+{
+	@Test
+	public void loginlogout() throws InterruptedException, IOException
+	{
+		
+		ActitimeLoginPage loginpage=new ActitimeLoginPage(driver);
+		
+		ActitimeHomePage homePage=new ActitimeHomePage(driver);
+		homePage.logoutMethod();
+	}
+}
